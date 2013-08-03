@@ -1,0 +1,32 @@
+{
+    "name": "esserj/fly-cms",
+    "description": "Zend Framework 2 Module that provides a CMS layer to ZF MVC",
+    "type": "library",
+    "keywords": [
+        "fly",
+        "cms",
+        "flycms",
+        "twig",
+        "module",
+        "zf2"
+    ],
+    "homepage": "http://www.github.com/esserj/FlyCMS/",
+    "authors": [
+        {
+            "name": "Jan Esser",
+            "email": "esserj@gmail.com",
+            "homepage": ""
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": ">2.2.0rc1",
+        "zf-commons/zfc-twig": "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "FlyCMS": "src/"
+        }
+    }
+}
