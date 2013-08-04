@@ -1,7 +1,0 @@
-!.gitignore
-.composer
-composer
-zendframework
-twig
-zf-commons
-autoload.php
