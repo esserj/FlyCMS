@@ -18,12 +18,9 @@
             "homepage": ""
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": ">2.2.0rc1"
-    },
-    "require-dev": {
+        "zendframework/zendframework": ">2.2.0rc1",
         "zf-commons/zfc-twig": "dev-1.2rc1",
         "zf-commons/zfc-user": "dev-master",
         "zf-commons/zfc-rbac": "dev-master",
