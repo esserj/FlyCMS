@@ -21,10 +21,12 @@
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": ">2.2.0rc1",
-        "zf-commons/zfc-twig": "dev-1.2rc1",
         "zf-commons/zfc-user": "dev-master",
         "zf-commons/zfc-rbac": "dev-master",
         "zf-commons/zfc-user-doctrine-orm": "dev-master"
+    },
+    "require-dev": {
+        "zf-commons/zfc-twig": "dev-1.2rc1"
     },
 
     "autoload": {
