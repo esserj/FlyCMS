@@ -18,10 +18,25 @@
             "homepage": ""
         }
     ],
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "zf-commons/zfc-twig",
+            "version": "1.2rc1",
+            "source": {
+                "url": "git@github.com:ZF-Commons/ZfcTwig.git",
+                "type": "git",
+                "reference": "1.2rc1"
+            }
+        }
+    }],
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": ">2.2.0rc1",
-        "zf-commons/zfc-twig": "dev-master"
+        "zf-commons/zfc-twig": "1.2rc1"
+        "zf-commons/zfc-user": "dev-master",
+        "zf-commons/zfc-rbac": "dev-master",
+        "zf-commons/zfc-user-doctrine-orm": "dev-master",
     },
 
     "autoload": {
