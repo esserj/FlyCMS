@@ -36,7 +36,7 @@
         "zf-commons/zfc-twig": "1.2rc1",
         "zf-commons/zfc-user": "dev-master",
         "zf-commons/zfc-rbac": "dev-master",
-        "zf-commons/zfc-user-doctrine-orm": "dev-master",
+        "zf-commons/zfc-user-doctrine-orm": "dev-master"
     },
 
     "autoload": {
