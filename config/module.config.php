@@ -18,14 +18,14 @@ return array(
     ),
     'doctrine' => array(
         'driver' => array(
-            'flycms_zfcuser_entity' => array(
+            'zfcuser_entity' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
                 'paths' => __DIR__ . '/xml/flycmszfcuserdoctrineorm'
             ),
 
             'orm_default' => array(
                 'drivers' => array(
-                    'FlyCMS\User\Entity'  => 'flycms_zfcuser_entity'
+                    'FlyCMS\User\Entity'  => 'zfcuser_entity'
                 )
             )
         )

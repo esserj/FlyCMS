@@ -18,9 +18,9 @@ namespace FlyCMS\User\Entity;
 
 use Doctrine\ORM\PersistentCollection;
 use ZfcRbac\Identity\IdentityInterface;
-use ZfcUserDoctrineORM\Entity\User AS ZfcUserDoctrineOrmEntity;
+use ZfcUser\Entity\User as ZfcUserEntity;
 
-class User extends ZfcUserDoctrineOrmEntity implements IdentityInterface
+class User extends ZfcUserEntity implements IdentityInterface
 {
 
     /**
