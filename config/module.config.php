@@ -17,6 +17,24 @@ return array(
          */
         'disable_zf_model' => false,
     ),
+    'zfcrbac' => array(
+        'providers' => array(
+            'FlyCMS\Provider\AdjacencyList\Role\DoctrineORM' => array(),
+        ),
+        'firewalls' => array(
+            'ZfcRbac\Firewall\Controller' => array(
+                array('controller' => 'index', 'actions' => 'index', 'roles' => 'guest')
+            ),
+            'ZfcRbac\Firewall\Route' => array(
+                array('route' => 'profiles/add', 'roles' => 'member'),
+                array('route' => 'admin/*', 'roles' => 'administrator')
+            ),
+        ),
+        /**
+         * have identities provided by zfc-user module
+         */
+        'identity_provider' => 'zfcuser_auth_service'
+    ),
     'zfcuser' => array(
         'userEntityClass' => 'FlyCMS\Entity\User'
     ),
