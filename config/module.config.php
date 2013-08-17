@@ -1,7 +1,11 @@
 <?php
 return array(
     'flycms' => array(
-
+        'mapper' => array(
+            'role' => array(
+                'entityClass' => 'FlyCMS\Entity\Role'
+            )
+        )
     ),
     'zfctwig' => array(
         'extensions' => array(
@@ -14,18 +18,18 @@ return array(
         'disable_zf_model' => false,
     ),
     'zfcuser' => array(
-        'userEntityClass' => 'FlyCMS\User\Entity\User'
+        'userEntityClass' => 'FlyCMS\Entity\User'
     ),
     'doctrine' => array(
         'driver' => array(
-            'zfcuser_entity' => array(
+            'FlyCmsEntity' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
-                'paths' => __DIR__ . '/xml/flycmszfcuserdoctrineorm'
+                'paths' => __DIR__ . '/xml/doctrine'
             ),
 
             'orm_default' => array(
                 'drivers' => array(
-                    'FlyCMS\User\Entity'  => 'zfcuser_entity'
+                    'FlyCMS\Entity'  => 'FlyCmsEntity'
                 )
             )
         )

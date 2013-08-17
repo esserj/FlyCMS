@@ -3,7 +3,7 @@
 namespace FlyCMS;
 
 
-use FlyCMS\Twig\Extension\FlyCms;
+use FlyCMS\Twig\Extension\FlyCms AS FlyCmsTwigExtension;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
@@ -26,8 +26,6 @@ class Module implements BootstrapListenerInterface, ConfigProviderInterface, Ser
 
         $application    = $e->getApplication();
         $serviceManager = $application->getServiceManager();
-        $config = $serviceManager->get('Configuration');
-        $test='';
     }
 
 
@@ -52,12 +50,20 @@ class Module implements BootstrapListenerInterface, ConfigProviderInterface, Ser
         return array(
             'factories' => array(
                 'FlyCmsExtension' => function(){
-                   return new FlyCms();
+                   return new FlyCmsTwigExtension();
                 },
-                'zfcuser_user_mapper' => function ($sm) {
-                    return new User\Mapper\User(
+                'FlyCmsRoleMapper' => function ($sm) {
+                    return new Mapper\Role(
                         $sm->get('zfcuser_doctrine_em'),
-                        $sm->get('zfcuser_module_options')
+                        $sm->get('FlyCmsRoleMapperOptions')
+                    );
+                },
+                'FlyCmsRoleMapperOptions' => function ($sm) {
+                    $config = $sm->get('Configuration');
+                    return new Options\RoleMapperOptions(
+                        (isset($config['flycms']['mapper']['role'])
+                            ? $config['flycms']['mapper']['role']
+                            : array())
                     );
                 },
             ),

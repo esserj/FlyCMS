@@ -13,7 +13,7 @@
  */
 
 
-namespace FlyCMS\User\Entity;
+namespace FlyCMS\Entity;
 
 
 use Doctrine\ORM\PersistentCollection;

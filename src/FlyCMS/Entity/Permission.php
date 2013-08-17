@@ -13,20 +13,15 @@
  */
 
 
-namespace FlyCMS\User\Entity;
+namespace FlyCMS\Entity;
 
 
-class Role {
+class Permission {
 
     /**
      * @var int
      */
     protected $id;
-
-    /**
-     * @var Role
-     */
-    protected $parent;
 
     /**
      * @var string
@@ -68,24 +63,5 @@ class Role {
     {
         return $this->name;
     }
-
-    /**
-     * @param Role $parent
-     * @return self
-     */
-    public function setParent($parent)
-    {
-        $this->parent = $parent;
-        return $this;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getParent()
-    {
-        return $this->parent;
-    }
-
 
 }
