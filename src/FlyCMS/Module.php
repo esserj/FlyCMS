@@ -52,20 +52,6 @@ class Module implements BootstrapListenerInterface, ConfigProviderInterface, Ser
                 'FlyCmsExtension' => function(){
                    return new FlyCmsTwigExtension();
                 },
-                'FlyCmsRoleMapper' => function ($sm) {
-                    return new Mapper\Role(
-                        $sm->get('zfcuser_doctrine_em'),
-                        $sm->get('FlyCmsRoleMapperOptions')
-                    );
-                },
-                'FlyCmsRoleMapperOptions' => function ($sm) {
-                    $config = $sm->get('Configuration');
-                    return new Options\RoleMapperOptions(
-                        (isset($config['flycms']['mapper']['role'])
-                            ? $config['flycms']['mapper']['role']
-                            : array())
-                    );
-                },
             ),
         );
     }
